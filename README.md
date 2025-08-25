@@ -1,5 +1,8 @@
 # PUNTO 2🔌 Comunicación UART ESP32 ↔ Raspberry Pi Pico
-
+[![ESP32](https://img.shields.io/badge/ESP32-Dev%20Module-red?style=flat&logo=espressif)](https://www.espressif.com/en/products/socs/esp32)
+[![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-Pico-green?style=flat&logo=raspberry-pi)](https://www.raspberrypi.org/products/raspberry-pi-pico/)
+[![Arduino](https://img.shields.io/badge/Arduino-IDE-blue?style=flat&logo=arduino)](https://www.arduino.cc/en/software)
+[![MicroPython](https://img.shields.io/badge/MicroPython-v1.20-yellow?style=flat&logo=micropython)](https://micropython.org/)
 ## 📋 Descripción
 Comunicación serial bidireccional entre ESP32 y Raspberry Pi Pico con LEDs de estado visual.
 
@@ -7,21 +10,22 @@ Comunicación serial bidireccional entre ESP32 y Raspberry Pi Pico con LEDs de e
 
 ### UART
 
-ESP32 ←→ Raspberry Pi Pico
-GPIO17 (TX) ←→ GP1 (RX)
-GPIO16 (RX) ←→ GP0 (TX)
-GND ←→ GND
+| Raspberry Pi Pico | ESP32 | 
+|------------------|--------|
+| **GPIO1 (Rx)** | **GPIO17 (TX)** | 
+| **GP0 (TX)** | **GPIO16 (RX)** |
+| **GND** | **GND** | GND |
 
 
 ### LEDs (Raspberry Pi Pico)
-GP2 → LED Verde + 220Ω → GND (Comunicación OK)
+GP2 → LED Azul + 220Ω → GND (Comunicación OK)
 GP3 → LED Azul + 220Ω → GND (Sin Comunicación)
 
 ## 🚀 Funcionamiento
 
 - **ESP32**: Envía mensajes cada 3 segundos
 - **Pico**: Responde automáticamente y controla LEDs
-- **Verde ON**: Comunicación activa ✅
+- **Azul ON**: Comunicación activa ✅
 - **Rojo ON**: Sin comunicación ❌
 - **Timeout**: 8 segundos
 
@@ -38,10 +42,12 @@ GP3 → LED Azul + 220Ω → GND (Sin Comunicación)
 ## 📺 Capturas
 
 ### Consola
-![Salida de Consola](images/console_output.png)
+![Salida de Consola](<img width="2216" height="2405" alt="pruebas" src="https://github.com/user-attachments/assets/bacfdb74-eab5-429d-a98b-018d78f8da69" />
+)
 
-### Demo LEDs
-![Funcionamiento](images/led_demo.gif)
+### LEDs
+![Funcionamiento](![Punto2](https://github.com/user-attachments/assets/9c63f598-a797-4902-98b7-cf035351350c)
+)
 
 ## 📊 Especificaciones
 - **Protocolo**: UART 8N1
@@ -52,11 +58,6 @@ GP3 → LED Azul + 220Ω → GND (Sin Comunicación)
 
 
 # PUNTO 3🔌 Comunicación SPI entre ESP32 y Raspberry Pi Pico
-
-[![ESP32](https://img.shields.io/badge/ESP32-Dev%20Module-red?style=flat&logo=espressif)](https://www.espressif.com/en/products/socs/esp32)
-[![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-Pico-green?style=flat&logo=raspberry-pi)](https://www.raspberrypi.org/products/raspberry-pi-pico/)
-[![Arduino](https://img.shields.io/badge/Arduino-IDE-blue?style=flat&logo=arduino)](https://www.arduino.cc/en/software)
-[![MicroPython](https://img.shields.io/badge/MicroPython-v1.20-yellow?style=flat&logo=micropython)](https://micropython.org/)
 
 ## 📋 Descripción
 
@@ -69,17 +70,6 @@ Implementación de comunicación **SPI síncrona** entre ESP32 (esclavo) y Raspb
 - 🔄 Protocolo de comandos simple (0x01=ON, 0x00=OFF)
 - 📡 Detección de errores con timeouts
 - 🖥️ Monitoreo serial en tiempo real
-
-## 🧰 Materiales
-
-| Componente | Cantidad |
-|------------|----------|
-| ESP32 Dev Module | 1 |
-| Raspberry Pi Pico | 1 |
-| LED + Resistencia 220Ω | 1 |
-| Protoboard | 1 |
-| Cables Jumper | 8 |
-| Cables USB | 2 |
 
 ## 🔌 Conexiones
 
@@ -96,32 +86,12 @@ Implementación de comunicación **SPI síncrona** entre ESP32 (esclavo) y Raspb
 GPIO 2 → Resistencia 220Ω → LED(+)
 GND → LED(-)
 
-## 🚀 Instalación
 
-### ESP32 (Arduino IDE)
-1. Instalar ESP32 en Arduino IDE
-2. Cargar `spi_esclavo_esp32.ino`
-3. Seleccionar "ESP32 Dev Module"
-4. Subir código (115200 baud)
-
-### Raspberry Pi Pico (Thonny)
-1. Instalar Thonny IDE
-2. Configurar MicroPython (Raspberry Pi Pico)
-3. Cargar `spi_maestro_pico.py`
-4. Ejecutar programa
-
-## 🏃‍♂️ Ejecución
-
-1. Conectar hardware según diagrama
-2. Programar ESP32 primero
-3. Programar Raspberry Pi Pico
-4. Observar LED encender/apagar cada 2 segundos
-
-## 📊 Resultado Esperado
 
 ## 🎬 Demostración
 
-![SPI Communication Demo](./demo/spi_funcionamiento.gif)
+![SPI](![Punto2 gif](https://github.com/user-attachments/assets/c8a9939a-a87a-4952-a82e-f0be97dc9d7a)
+)
 
 *Comunicación SPI en tiempo real: LED controlado remotamente desde Raspberry Pi Pico*
 
