@@ -39,15 +39,14 @@ GP3 → LED Azul + 220Ω → GND (Sin Comunicación)
 - UART: 9600 baudios
 - MicroPython
 
-## 📺 Capturas
+## 🎬 Demostración
 
 ### Consola
-![Salida de Consola](<img width="2216" height="2405" alt="pruebas" src="https://github.com/user-attachments/assets/bacfdb74-eab5-429d-a98b-018d78f8da69" />
-)
+<img width="2216" height="1594" alt="pruebas" src="https://github.com/user-attachments/assets/b4d889ca-1a1d-436a-9d3c-a9d88ba8f751" />
 
 ### LEDs
-![Funcionamiento](![Punto2](https://github.com/user-attachments/assets/9c63f598-a797-4902-98b7-cf035351350c)
-)
+![Punto2](https://github.com/user-attachments/assets/bc288129-3394-48a3-95bb-c6b21b500605)
+
 
 ## 📊 Especificaciones
 - **Protocolo**: UART 8N1
@@ -143,3 +142,9 @@ Sistema de comunicación **I2C** donde la **Raspberry Pi Pico** (maestro) lee va
 - **Resolución ADC:** 12 bits (0-4095)
 - **Frecuencia de lectura:** 500ms
 - **Mapeo:** ADC → 8 bits (0-255)
+- 
+## 🎬 Demostración
+![punto4](https://github.com/user-attachments/assets/20a26ce9-6309-42ca-8c40-f22c67a10868)
+
+
+
