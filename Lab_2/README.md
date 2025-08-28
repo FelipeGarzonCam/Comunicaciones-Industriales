@@ -38,8 +38,9 @@ Este laboratorio implementa y compara diferentes técnicas de detección de erro
 ## 📊 Resultados Experimentales
 
 ### **Punto 1: Checksum Simple**
+![Punto1](https://github.com/user-attachments/assets/3cf14817-bf54-4d9d-9a05-23030716305a)
 
-*[Insertar imagen/GIF mostrando detección de errores con checksum]*
+
 
 **Análisis:**
 
@@ -50,7 +51,7 @@ Este laboratorio implementa y compara diferentes técnicas de detección de erro
 
 ### **Punto 2: Protocolo ARQ**
 
-*[Insertar imagen/GIF mostrando reintentos y estadísticas ARQ]*
+<img width="1078" height="298" alt="Punto2" src="https://github.com/user-attachments/assets/d3ee9d84-5a2b-4fee-97e6-70daa22b73c3" />
 
 
 | Probabilidad Error | Reintentos Promedio | Tasa Entrega |
@@ -62,8 +63,7 @@ Este laboratorio implementa y compara diferentes técnicas de detección de erro
 
 ### **Punto 3: VRC vs LRC**
 
-*[Insertar imagen/GIF mostrando comparación sincronizada VRC vs LRC]*
-
+![Punto3,1](https://github.com/user-attachments/assets/c4ac4611-008e-4b40-9d4d-18a40f71f269)
 
 | Método | Overhead | Eficiencia | Detección |
 | :-- | :-- | :-- | :-- |
