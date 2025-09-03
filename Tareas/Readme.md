@@ -79,3 +79,96 @@
 - **Referencia:** Autonics – Sensor MS-2  
 
 <img width="204" height="235" alt="image" src="https://github.com/user-attachments/assets/5d0af841-62f8-4d5b-9971-61bef6488408" />
+
+# 🖥️ TAREA 2  
+
+<img width="921" height="401" alt="image" src="https://github.com/user-attachments/assets/64068a23-e059-4314-9eda-880ecac51ed9" />
+
+## 1. 🔡 Código ASCII  
+
+### Historia y funcionamiento  
+- El **código ASCII** (American Standard Code for Information Interchange) fue desarrollado en **1963** por el comité **ASA** (hoy **ANSI**) para unificar la representación de caracteres.  
+- Antes de ASCII, cada fabricante usaba su propio sistema de codificación → ❌ comunicación entre equipos distintos era difícil.  
+- ASCII usa **7 bits** → 128 caracteres (0–127):  
+  - Letras mayúsculas y minúsculas (A–Z, a–z).  
+  - Dígitos numéricos (0–9).  
+  - Símbolos de puntuación.  
+  - Caracteres de control (ESC, CR, BEL, etc.).  
+- En los años 80 se amplió a **8 bits** (ASCII extendido → 256 caracteres), incluyendo:  
+  - Vocales acentuadas (á, é, í, ó, ú).  
+  - Símbolos matemáticos.  
+  - Gráficos usados en interfaces antiguas.  
+
+📌 **Importancia:** ASCII fue el **primer estándar** que permitió interoperabilidad entre **computadoras, impresoras, terminales** y más tarde **internet**.  
+👉 Hoy fue reemplazado en gran parte por **Unicode (UTF-8)**, pero sigue siendo la base de compatibilidad.  
+
+---
+
+## 2. 🔌 Pines de los conectores DB9 y DB25 (RS232)  
+
+El estándar **RS232** define la comunicación en transmisión serie asíncrona.  
+
+### Conector DB9 (9 pines, el más común en PCs)  
+1. `DCD` → Data Carrier Detect 📡  
+2. `RXD` → Receive Data ⬅️  
+3. `TXD` → Transmit Data ➡️  
+4. `DTR` → Data Terminal Ready ✅  
+5. `GND` → Ground ⚡  
+6. `DSR` → Data Set Ready 📶  
+7. `RTS` → Request to Send 📨  
+8. `CTS` → Clear to Send 📭  
+9. `RI` → Ring Indicator ☎️  
+
+### Conector DB25 (25 pines, estándar original)  
+- Incluye los mismos que el DB9 ➕ más señales de control y sincronización.  
+- Ejemplos:  
+  - Pin 2 → TXD  
+  - Pin 3 → RXD  
+  - Pin 7 → GND  
+  - Pin 4 → RTS, Pin 5 → CTS  
+  - Pin 6 → DSR, Pin 8 → DCD, Pin 20 → DTR  
+
+💡 **Aplicación práctica:** Conexión de PCs con impresoras, módems y periféricos en los 80s y 90s.  
+👉 Aún usado en **industria y comunicaciones**.  
+
+---
+
+## 3. 📡 Formato del protocolo RS232  
+
+El protocolo **RS232** transmite datos **serialmente, de forma asíncrona**, un bit a la vez.  
+
+### Características principales  
+- **Velocidad:** en **baudios** (ej. 9600, 115200 bps).  
+- **Niveles eléctricos:**  
+  - `−3V a −15V` = “1” lógico.  
+  - `+3V a +15V` = “0” lógico.  
+- **Sincronización:** sin reloj compartido → necesita bits de inicio y parada.  
+
+### Estructura de una trama RS232  
+1. **Start bit:** siempre 0 → marca inicio.  
+2. **Bits de datos:** 5–8 (usados: 7 u 8).  
+3. **Bit de paridad (opcional):** detección de errores (par, impar o ninguno).  
+4. **Stop bits:** 1, 1.5 o 2 → nivel alto (1).  
+
+👉 Ejemplo común: **9600-8N1**  
+- 9600 baudios, 8 bits de datos, No paridad, 1 bit de parada.  
+
+### ✅ Ventajas  
+- Simple.  
+- Confiable.  
+- Ampliamente soportado.  
+
+### ❌ Desventajas  
+- Velocidad limitada.  
+- Distancia máxima ~15 m.  
+- No soporta múltiples dispositivos a la vez.  
+
+---
+
+## 📚 Fuentes confiables  
+- ANSI: *The History of ASCII*  
+- IBM Developer: *What is ASCII?*  
+- TechTarget: *RS-232 Explained*  
+- AllPinouts: *RS232 Pinouts*  
+- National Instruments: *RS232 Protocol*  
+- SparkFun: *RS232 Basics*  
