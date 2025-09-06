@@ -172,3 +172,75 @@ El protocolo **RS232** transmite datos **serialmente, de forma asíncrona**, un 
 - AllPinouts: *RS232 Pinouts*  
 - National Instruments: *RS232 Protocol*  
 - SparkFun: *RS232 Basics*  
+
+# 📘 TAREA 3
+
+<img width="1666" height="519" alt="image" src="https://github.com/user-attachments/assets/1fcf4e2b-a91e-4719-93c3-163a4f02d6cd" />
+
+# MAX232 – Guía Informativa  
+
+## 📌 Introducción  
+El **MAX232** es un circuito integrado diseñado por Maxim Integrated que funciona como un **conversor de niveles lógicos**. Su objetivo principal es adaptar las señales **RS-232** (±12V) a niveles TTL/CMOS (0–5V o 0–3.3V según la versión), permitiendo la comunicación entre computadoras, microcontroladores y dispositivos periféricos.  
+
+## ⚡ Esquema Eléctrico y Funcionamiento  
+El MAX232 utiliza un conjunto de **bombeo de carga (charge pump)** y condensadores externos para generar los voltajes requeridos para la conversión.  
+
+- **Entradas RS-232 → Salidas TTL**: convierte niveles ±12V a niveles lógicos de 0–5V.  
+- **Entradas TTL → Salidas RS-232**: convierte señales de 0–5V a niveles de ±12V.  
+
+📷 **Diagrama simplificado** (según datasheet):  
+
+<img width="277" height="273" alt="image" src="https://github.com/user-attachments/assets/580f2442-1721-421c-b228-8b99d8428f1f" />
+
+<img width="506" height="384" alt="image" src="https://github.com/user-attachments/assets/6164aaee-23be-4261-9572-9b98077552e0" />
+
+
+Requiere **4 condensadores externos (1µF a 10µF típicamente)** para operar correctamente.  
+
+## 🔄 Variantes y Prestaciones Típicas  
+Existen varias versiones del MAX232 adaptadas a distintas necesidades:  
+
+- **MAX232**: versión original, 5V de alimentación.  
+- **MAX232A**: menor consumo de energía y condensadores más pequeños (0.1µF).  
+- **MAX3232**: compatible con 3.0V a 5.5V, ideal para microcontroladores modernos.  
+- **MAX202 / MAX241 / MAX214**: con distintos números de transceptores y protecciones ESD.  
+
+**Prestaciones típicas:**  
+- Comunicación bidireccional RS-232 ↔ TTL.  
+- Velocidades de transmisión hasta **120 kbps** (MAX232) o superiores en variantes modernas.  
+- Funciona con un solo suministro de 5V (MAX232) o 3.3V (MAX3232).  
+- Alta compatibilidad con microcontroladores (Arduino, PIC, AVR, STM32, etc.).  
+
+## 🖥️ Uso Actual, Aplicaciones, Ventajas y Desventajas  
+
+### ¿Se sigue usando hoy en día?  
+✅ Sí. Aunque las interfaces modernas como **USB, Ethernet y Bluetooth** han reemplazado en gran medida al RS-232, el MAX232 sigue siendo ampliamente usado en sistemas embebidos, automatización industrial y equipos de laboratorio que todavía emplean puertos serie.  
+
+### Aplicaciones:  
+- Adaptadores de **microcontroladores a PC** (Arduino, PIC, STM32, etc.).  
+- Instrumentación industrial con comunicación RS-232.  
+- Equipos médicos y de laboratorio.  
+- Sistemas de control antiguos donde aún se usa el puerto serial.  
+
+### Ventajas:  
+- Muy económico y fácil de implementar.  
+- Alta confiabilidad en la conversión de niveles.  
+- Compatible con una gran variedad de microcontroladores.  
+
+### Desventajas:  
+- Velocidad limitada en comparación con interfaces modernas.  
+- Necesidad de capacitores externos.  
+- RS-232 está en desuso en dispositivos de consumo (ya no se incluye en laptops modernas).  
+
+---
+
+## 📑 Conclusión  
+El MAX232, pese a ser un circuito diseñado hace varias décadas, sigue siendo un componente esencial en proyectos académicos y aplicaciones industriales donde se necesita comunicación **RS-232 ↔ TTL**. Sus variantes actuales, como el **MAX3232**, lo mantienen vigente para trabajar tanto con niveles de 5V como de 3.3V, lo que lo hace útil incluso con microcontroladores modernos.  
+
+---
+
+## 📚 Referencias  
+- Datasheet oficial: [Texas Instruments MAX232](https://www.ti.com/lit/ds/symlink/max232.pdf)  
+- Maxim Integrated: [MAX232 Product Page](https://www.analog.com/en/products/max232.html)  
+- Sparkfun – RS232 Basics: [Enlace](https://learn.sparkfun.com/tutorials/serial-communication/rs-232)  
+
