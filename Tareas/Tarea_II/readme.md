@@ -1,6 +1,6 @@
 # Tarea: Vigilancia Tecnológica de Protocolos Industriales
 
-Luis Garzon
+Luis Garzon Camacho
 
 David Quinchanegua
 
