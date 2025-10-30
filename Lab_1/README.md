@@ -1,8 +1,5 @@
 # PUNTO 2🔌 Comunicación UART ESP32 ↔ Raspberry Pi Pico
-[![ESP32](https://img.shields.io/badge/ESP32-Dev%20Module-red?style=flat&logo=espressif)](https://www.espressif.com/en/products/socs/esp32)
-[![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-Pico-green?style=flat&logo=raspberry-pi)](https://www.raspberrypi.org/products/raspberry-pi-pico/)
-[![Arduino](https://img.shields.io/badge/Arduino-IDE-blue?style=flat&logo=arduino)](https://www.arduino.cc/en/software)
-[![MicroPython](https://img.shields.io/badge/MicroPython-v1.20-yellow?style=flat&logo=micropython)](https://micropython.org/)
+
 ## 📋 Descripción
 Comunicación serial bidireccional entre ESP32 y Raspberry Pi Pico con LEDs de estado visual.
 
